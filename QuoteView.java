@@ -47,7 +47,7 @@ public class QuoteView
         System.out.println(String.format("Value of Payload:               %18.2f", (dPayloadVal)));
         System.out.println(String.format("Base Service Cost:              %18.2f",(dCost)));
         System.out.println(String.format("Base Cost of Services:          %18.2f", (dCostByNum)));
-        System.out.println(String.format("Discount Amount:                %18.2f", (dDiscount)));
+        if(dDiscount < 0) System.out.println(String.format("Discount Amount:                %18.2f", (dDiscount)));
         if (bNitrogen) System.out.println(String.format("Cost of Nitrogen Flush:         %18.2f", (dCostNitrogen)));
         System.out.println(String.format("Gross Cost:                     %18.2f", (dCostGross)));
         System.out.println(String.format("Tax Cost:                       %18.2f", (dTax)));

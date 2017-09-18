@@ -28,7 +28,7 @@ public class QuoteModel
     private double dCostInsurance; // the cost of insurance
     private double dCostNesa; // Extra for GTO tracking
     private double dCostNett; // Nett invoice amount (total)
-    private double dCostInvoice; // Nett invoice amount (total)
+    private double dCostInvoice; // Nett invoice amount (total)
 
     /**
      * Constructor for objects of class QuoteModel
@@ -39,10 +39,14 @@ public class QuoteModel
     }
 
     public void calculate() {
-this.dCostGross = this.
-        this.nesa
-        this.tax
-        this.
+        this.dCostInsurance = (this.bInsurance) ? (this.iNearestMillion * 97100) : 0;
+
+        this.dCostNett = this.dCostInsurance + (this.dCostNitrogen * this.iNum);
+        this.dCostNesa = this.dCostNett * 0.04;
+        this.dDiscount = (this.iNum > 4) ? (0.03 * this.dCostNett)*-1.0: 0;
+        this.dTax = this.dCostNett * 0.03;
+        this.dCostGross = this.dCostNett + this.dCostGross + this.dTax + this.dDiscount;
+
     }
 
     public void set_scServiceCode( ServiceCode scServiceCode) throws CustomQuote { 
@@ -51,7 +55,6 @@ this.dCostGross = this.
         this.sDescription = scServiceCode.getDescription();
         this.bManned = scServiceCode.getManned();
 
-        if(bManned) dTax = 3.0;
     }
 
     public ServiceCode get_scServiceCode() { return scServiceCode; }
@@ -65,8 +68,6 @@ this.dCostGross = this.
     public void set_iNum( int iNum) {
         this.iNum= iNum; 
         this.dCostByNum = this.iNum * this.dCost;
-
-        this.dDiscount = (this.iNum > 4) ? 0.03: 0;
     }
 
     public int get_iNum() { return iNum; }
@@ -104,8 +105,6 @@ this.dCostGross = this.
     public double get_dDiscount() { return dDiscount; }
 
     public double get_dCostNitrogen() { return dCostNitrogen; }
-
-
 
     public double get_dCostGross() { return dCostGross; }
 

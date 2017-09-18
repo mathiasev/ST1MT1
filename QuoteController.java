@@ -80,8 +80,6 @@ public class QuoteController
 
     public double get_dCostNitrogen(){ return model.get_dCostNitrogen(); }
 
-    public void set_dCostGross( double dCostGross) { model.set_dCostGross(dCostGross); }
-
     public double get_dCostGross(){ return model.get_dCostGross(); }
 
     public double get_dTax(){ return model.get_dTax(); }
