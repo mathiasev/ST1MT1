@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=QuoteView
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ QuoteView\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=sOrbit\ iNum\ dPayloadVal\ bNitrogen\ bManned\ dCost\ dCostByNum\ sDescription\ dDiscount\ dCostNitrogen\ dCostGross\ dTax\ iNearestMillion\ dCostInsurance\ dCostNesa\ dCostNett\ dCostInvoice\ sServiceCode\ bInsurance
+comment1.target=void\ printQuote(java.lang.String,\ int,\ double,\ boolean,\ boolean,\ double,\ double,\ java.lang.String,\ double,\ double,\ double,\ double,\ int,\ double,\ double,\ double,\ double,\ java.lang.String,\ boolean)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ QuoteView\r\n
+numComments=2
